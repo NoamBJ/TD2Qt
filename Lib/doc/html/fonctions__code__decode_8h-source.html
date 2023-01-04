@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CodeDecode:  Fichier source de fonctions_code_decode.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+    <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+  </ul>
+</div>
+<h1>fonctions_code_decode.h</h1><a href="fonctions__code__decode_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef _Code_Decode_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _Code_Decode_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 
+<a name="l00010"></a>00010 <span class="keywordtype">int</span> <a class="code" href="fonctions__code__decode_8h.html#f84a53b664a2bd83fa57193a47124ec5" title="Fonction permettant de déterminer la taille des tableaux &amp;quot;information&amp;quot;...">GetTailleInformationControlFromMessage</a>(<span class="keywordtype">int</span> taille_message);
+<a name="l00011"></a>00011 
+<a name="l00014"></a>00014 <span class="keywordtype">int</span> <a class="code" href="fonctions__code__decode_8h.html#4f247f7b3cc4372bbb156a69d988d145" title="Fonction permettant de déterminer la taille du message obtenu à partir deux tableaux...">GetTailleMessageFromInformationControl</a>(<span class="keywordtype">int</span> taille_information_control);
+<a name="l00015"></a>00015 
+<a name="l00018"></a>00018 <span class="keywordtype">int</span> <a class="code" href="fonctions__code__decode_8h.html#751b56b3ad6a378316f0add32dedfd5a" title="Fonction permettant de déterminer la taille des tableaux &amp;quot;information&amp;quot;...">GetTailleInformationControlFromSignal</a>(<span class="keywordtype">int</span> taille_signal);
+<a name="l00019"></a>00019 
+<a name="l00022"></a>00022 <span class="keywordtype">int</span> <a class="code" href="fonctions__code__decode_8h.html#c20e4a9c9be424222e49072ee42850e1" title="Fonction permettant de déterminer la taille du signal à transmettre à partir deux...">GetTailleSignalFromInformationControl</a>(<span class="keywordtype">int</span> taille_information_control);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026 
+<a name="l00031"></a>00031 <span class="keywordtype">void</span> <a class="code" href="fonctions__code__decode_8h.html#ac76b8f3935e6281b82c78b5e8fe295e" title="Fonction de codage convolutif systématique.">CodageConvolutif</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> message[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> information[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> control[], <span class="keywordtype">int</span> taille_message);
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034 
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> <a class="code" href="fonctions__code__decode_8h.html#5acef3e0fee3feab9cedf32d883eb426" title="Fonction de decodage convolutif systèmatique.">DecodageConvolutif</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> information[], <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> control[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> message[], <span class="keywordtype">int</span> taille_information_control);
+<a name="l00040"></a>00040 
+<a name="l00042"></a>00042 
+<a name="l00047"></a>00047 <span class="keywordtype">void</span> <a class="code" href="fonctions__code__decode_8h.html#72f8fd472539ce06b43abe999c45ca91" title="Melange binaire de l&amp;#39;information et du control pour faire le signal.">MelangeInformationControl</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> information[], <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> control[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> signal[], <span class="keywordtype">int</span> taille_information_control);
+<a name="l00048"></a>00048 
+<a name="l00050"></a>00050 
+<a name="l00055"></a>00055 <span class="keywordtype">void</span> <a class="code" href="fonctions__code__decode_8h.html#fc9f8b89f327473fb7a17160d95da492" title="Séparation binaire de l&amp;#39;information et du control à partir du signal.">SepareInformationControl</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> signal_recu[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> information[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> control[], <span class="keywordtype">int</span> taille_signal);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 
+<a name="l00059"></a>00059 
+<a name="l00065"></a>00065 <span class="keywordtype">void</span> <a class="code" href="fonctions__code__decode_8h.html#a66491ee5c8a3c81af29dad73a6a79d4" title="Fonction de bruitage du signal (bruit uniforme). &amp;quot;p&amp;quot; est le pourcentage...">BruitAdditif</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> signal[], <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> signal_bruit[], <span class="keywordtype">int</span> taille_signal, <span class="keywordtype">double</span> p, <span class="keywordtype">int</span> offset);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="preprocessor">#endif</span>
+</pre></div><hr size="1"><address style="text-align: right;"><small>Généré le Fri Jan 11 02:18:15 2008 pour CodeDecode par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

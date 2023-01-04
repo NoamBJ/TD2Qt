@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CodeDecode: Référence du fichier fonctions_code_decode.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+    <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+  </ul>
+</div>
+<h1>Référence du fichier fonctions_code_decode.h</h1><code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;time.h&gt;</code><br>
+
+<p>
+<a href="fonctions__code__decode_8h-source.html">Aller au code source de ce fichier.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#f84a53b664a2bd83fa57193a47124ec5">GetTailleInformationControlFromMessage</a> (int taille_message)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction permettant de déterminer la taille des tableaux "information" et "controle" à partir d'un message de taille <em>taille_message</em>.  <a href="#f84a53b664a2bd83fa57193a47124ec5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#4f247f7b3cc4372bbb156a69d988d145">GetTailleMessageFromInformationControl</a> (int taille_information_control)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction permettant de déterminer la taille du message obtenu à partir deux tableaux "information" et "controle" de même taille <em>taille_information_control</em>.  <a href="#4f247f7b3cc4372bbb156a69d988d145"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#751b56b3ad6a378316f0add32dedfd5a">GetTailleInformationControlFromSignal</a> (int taille_signal)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction permettant de déterminer la taille des tableaux "information" et "controle" à partir d'un signal recu de taille <em>taille_signal</em>.  <a href="#751b56b3ad6a378316f0add32dedfd5a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#c20e4a9c9be424222e49072ee42850e1">GetTailleSignalFromInformationControl</a> (int taille_information_control)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction permettant de déterminer la taille du signal à transmettre à partir deux tableaux "information" et "controle" de même taille <em>taille_information_control</em>.  <a href="#c20e4a9c9be424222e49072ee42850e1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#ac76b8f3935e6281b82c78b5e8fe295e">CodageConvolutif</a> (const unsigned char message[], unsigned char information[], unsigned char control[], int taille_message)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction de codage convolutif systématique.  <a href="#ac76b8f3935e6281b82c78b5e8fe295e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#5acef3e0fee3feab9cedf32d883eb426">DecodageConvolutif</a> (const unsigned char information[], const unsigned char control[], unsigned char message[], int taille_information_control)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction de decodage convolutif systèmatique.  <a href="#5acef3e0fee3feab9cedf32d883eb426"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#72f8fd472539ce06b43abe999c45ca91">MelangeInformationControl</a> (const unsigned char information[], const unsigned char control[], unsigned char signal[], int taille_information_control)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Melange binaire de l'information et du control pour faire le signal.  <a href="#72f8fd472539ce06b43abe999c45ca91"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#fc9f8b89f327473fb7a17160d95da492">SepareInformationControl</a> (const unsigned char signal_recu[], unsigned char information[], unsigned char control[], int taille_signal)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Séparation binaire de l'information et du control à partir du signal.  <a href="#fc9f8b89f327473fb7a17160d95da492"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__code__decode_8h.html#a66491ee5c8a3c81af29dad73a6a79d4">BruitAdditif</a> (const unsigned char signal[], unsigned char signal_bruit[], int taille_signal, double p, int offset)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction de bruitage du signal (bruit uniforme). "p" est le pourcentage d'octets bruités. "offset" permet de commencer le bruitage qu'à partir de l'octet "offset".  <a href="#a66491ee5c8a3c81af29dad73a6a79d4"></a><br></td></tr>
+</table>
+<hr><h2>Documentation des fonctions</h2>
+<a class="anchor" name="a66491ee5c8a3c81af29dad73a6a79d4"></a><!-- doxytag: member="fonctions_code_decode.h::BruitAdditif" ref="a66491ee5c8a3c81af29dad73a6a79d4" args="(const unsigned char signal[], unsigned char signal_bruit[], int taille_signal, double p, int offset)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BruitAdditif           </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>signal</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>signal_bruit</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>offset</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction de bruitage du signal (bruit uniforme). "p" est le pourcentage d'octets bruités. "offset" permet de commencer le bruitage qu'à partir de l'octet "offset". 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>signal</em>&nbsp;</td><td>: signal à bruiter, de taille <em>taille_signal</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>signal_bruit</em>&nbsp;</td><td>:d signal bruité de taille <em>taille_signal</em>; parametre de sortie, espace à allouer avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille_signal</em>&nbsp;</td><td>: taille en octects de <em>signal</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>: pourcentage de bruit à appliquer </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>offset</em>&nbsp;</td><td>: offset de bruitage. avant l'octet "offset", le signal n'est pas bruité( pour les tests, permet de ne pas bruiter les entêtes: offset = 2*54 pour BMP) </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ac76b8f3935e6281b82c78b5e8fe295e"></a><!-- doxytag: member="fonctions_code_decode.h::CodageConvolutif" ref="ac76b8f3935e6281b82c78b5e8fe295e" args="(const unsigned char message[], unsigned char information[], unsigned char control[], int taille_message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CodageConvolutif           </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>message</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>information</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>control</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_message</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction de codage convolutif systématique. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>: message a coder de taille <em>taille_message</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille_message</em>&nbsp;</td><td>: taille du message (en octects); parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>information</em>&nbsp;</td><td>: partie "information" du message codé de taille <em>taille_message</em> + 1; parametre de sortie, ce tableau doit être alloué avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>control</em>&nbsp;</td><td>: partie "controle" du message codé de taille <em>taille_message</em> + 1; parametre de sortie, ce tableau doit être alloué avant l'appel à cette fonction </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5acef3e0fee3feab9cedf32d883eb426"></a><!-- doxytag: member="fonctions_code_decode.h::DecodageConvolutif" ref="5acef3e0fee3feab9cedf32d883eb426" args="(const unsigned char information[], const unsigned char control[], unsigned char message[], int taille_information_control)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DecodageConvolutif           </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>information</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>control</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>message</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_information_control</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction de decodage convolutif systèmatique. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>: message décodé de taille <em>taille_information_control</em> - 1; parametre de sortie, espace à allouer avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>information</em>&nbsp;</td><td>: partie "information" du message codé de taille <em>taille_information_control</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>control</em>&nbsp;</td><td>: partie "controle" du message codé de taille <em>taille_information_control</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille_information_control</em>&nbsp;</td><td>: taille en octects des parties "information" et "controle"; parametre d'entrée </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f84a53b664a2bd83fa57193a47124ec5"></a><!-- doxytag: member="fonctions_code_decode.h::GetTailleInformationControlFromMessage" ref="f84a53b664a2bd83fa57193a47124ec5" args="(int taille_message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTailleInformationControlFromMessage           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_message</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction permettant de déterminer la taille des tableaux "information" et "controle" à partir d'un message de taille <em>taille_message</em>. 
+<p>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>: 1 + taille_message </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="751b56b3ad6a378316f0add32dedfd5a"></a><!-- doxytag: member="fonctions_code_decode.h::GetTailleInformationControlFromSignal" ref="751b56b3ad6a378316f0add32dedfd5a" args="(int taille_signal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTailleInformationControlFromSignal           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_signal</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction permettant de déterminer la taille des tableaux "information" et "controle" à partir d'un signal recu de taille <em>taille_signal</em>. 
+<p>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>: taille_signal / 2 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4f247f7b3cc4372bbb156a69d988d145"></a><!-- doxytag: member="fonctions_code_decode.h::GetTailleMessageFromInformationControl" ref="4f247f7b3cc4372bbb156a69d988d145" args="(int taille_information_control)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTailleMessageFromInformationControl           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_information_control</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction permettant de déterminer la taille du message obtenu à partir deux tableaux "information" et "controle" de même taille <em>taille_information_control</em>. 
+<p>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>: taille_information_control - 1 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c20e4a9c9be424222e49072ee42850e1"></a><!-- doxytag: member="fonctions_code_decode.h::GetTailleSignalFromInformationControl" ref="c20e4a9c9be424222e49072ee42850e1" args="(int taille_information_control)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTailleSignalFromInformationControl           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_information_control</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction permettant de déterminer la taille du signal à transmettre à partir deux tableaux "information" et "controle" de même taille <em>taille_information_control</em>. 
+<p>
+<dl class="return" compact><dt><b>Renvoie:</b></dt><dd>: taille_information_control * 2 </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="72f8fd472539ce06b43abe999c45ca91"></a><!-- doxytag: member="fonctions_code_decode.h::MelangeInformationControl" ref="72f8fd472539ce06b43abe999c45ca91" args="(const unsigned char information[], const unsigned char control[], unsigned char signal[], int taille_information_control)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MelangeInformationControl           </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>information</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>control</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>signal</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_information_control</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Melange binaire de l'information et du control pour faire le signal. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>signal</em>&nbsp;</td><td>: signal à transmettre, composé alternativement d'un bit d'information et d'un bit de controle, la taille du signal est <em>taille_information_control*2</em>; parametre de sortie, espace à allouer avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>information</em>&nbsp;</td><td>: partie "information" du message codé de taille <em>taille_information_control</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>control</em>&nbsp;</td><td>: partie "controle" du message codé de taille <em>taille_information_control</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille_information_control</em>&nbsp;</td><td>: taille en octects des parties "information" et "controle"; parametre d'entrée </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fc9f8b89f327473fb7a17160d95da492"></a><!-- doxytag: member="fonctions_code_decode.h::SepareInformationControl" ref="fc9f8b89f327473fb7a17160d95da492" args="(const unsigned char signal_recu[], unsigned char information[], unsigned char control[], int taille_signal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SepareInformationControl           </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>signal_recu</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>information</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>control</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille_signal</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Séparation binaire de l'information et du control à partir du signal. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>signal_recu</em>&nbsp;</td><td>: signal (bruité) recu , composé alternativement d'un bit d'information et d'un bit de controle, la taille du signal est <em>taille_signal</em>; parametre d'entrée </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>information</em>&nbsp;</td><td>: partie "information" du message codé de taille <em>taille_signal</em> / 2; parametre de sortie, espace à allouer avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>control</em>&nbsp;</td><td>: partie "controle" du message codé de taille <em>taille_signal</em> / 2; parametre de sortie, espace à allouer avant l'appel à cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille_signal</em>&nbsp;</td><td>: taille en octects du <em>signal</em> recu; parametre d'entrée </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Généré le Fri Jan 11 02:18:15 2008 pour CodeDecode par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>CodeDecode: Référence du fichier fonctions_fichier.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Généré par Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="main.html"><span>Page&nbsp;principale</span></a></li>
+    <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+  </ul>
+</div>
+<h1>Référence du fichier fonctions_fichier.h</h1><code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+
+<p>
+<a href="fonctions__fichier_8h-source.html">Aller au code source de ce fichier.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__fichier_8h.html#a358de1d6f8d90e3a4d1f8c1b7ede219">LireFichier</a> (const char fichier[], unsigned char **message, int *taille, int offset)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction de lecture du fichier. le tableau <em>message</em> est alloué par cette fonction !!!  <a href="#a358de1d6f8d90e3a4d1f8c1b7ede219"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="fonctions__fichier_8h.html#5da5a7525c0d2a0f14063cf9017c886d">EcrireFichier</a> (const char fichier[], const unsigned char message[], int taille)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fonction d'écriture de fichier.  <a href="#5da5a7525c0d2a0f14063cf9017c886d"></a><br></td></tr>
+</table>
+<hr><h2>Documentation des fonctions</h2>
+<a class="anchor" name="5da5a7525c0d2a0f14063cf9017c886d"></a><!-- doxytag: member="fonctions_fichier.h::EcrireFichier" ref="5da5a7525c0d2a0f14063cf9017c886d" args="(const char fichier[], const unsigned char message[], int taille)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EcrireFichier           </td>
+          <td>(</td>
+          <td class="paramtype">const char&nbsp;</td>
+          <td class="paramname"> <em>fichier</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char&nbsp;</td>
+          <td class="paramname"> <em>message</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>taille</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction d'écriture de fichier. 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fichier</em>&nbsp;</td><td>: nom complet du fichier à ecrire (chemin + nom du fichier + extension) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>: tableau contenant tous les octets du fichier </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille</em>&nbsp;</td><td>: taille du tableau <em>message</em>, equivalent au nombre d'octets à ecrire </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a358de1d6f8d90e3a4d1f8c1b7ede219"></a><!-- doxytag: member="fonctions_fichier.h::LireFichier" ref="a358de1d6f8d90e3a4d1f8c1b7ede219" args="(const char fichier[], unsigned char **message, int *taille, int offset)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LireFichier           </td>
+          <td>(</td>
+          <td class="paramtype">const char&nbsp;</td>
+          <td class="paramname"> <em>fichier</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char **&nbsp;</td>
+          <td class="paramname"> <em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>taille</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>offset</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Fonction de lecture du fichier. le tableau <em>message</em> est alloué par cette fonction !!! 
+<p>
+<dl compact><dt><b>Paramètres:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fichier</em>&nbsp;</td><td>: nom complet du fichier (chemin + nom du fichier + extension) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>: tableau contenant tous les octets du fichier, ce tableau est alloué par cette fonction </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>taille</em>&nbsp;</td><td>: taile du fichier lu (en octet) correspond aussi à la taille du tableau <em>message</em> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>offset</em>&nbsp;</td><td>: offset à partir du quel le fichier est lu </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Généré le Fri Jan 11 02:18:15 2008 pour CodeDecode par&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>
